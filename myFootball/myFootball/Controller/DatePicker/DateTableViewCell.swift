@@ -8,7 +8,6 @@
 
 import UIKit
 
-/// Date Format type
 enum DateFormatType: String {
     case date = "dd-MMM-yyyy"
 }

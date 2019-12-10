@@ -43,12 +43,6 @@ class DatePickerTableViewCell: UITableViewCell {
         datePicker.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
     
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
-
     func updateCell(date: Date, indexPath: IndexPath) {
         datePicker.setDate(date, animated: true)
         self.indexPath = indexPath

@@ -78,10 +78,6 @@ class NetworkManager {
                 completion?(.failure(error!))
                 return
             }
-//            let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String: AnyObject]
-//            if let json = json {
-//                print(json.description)
-//            }
             do {
                 let decodedData = try self.jsonDecoder.decode(T.self, from: jsonData)
                 completion?(.success(decodedData))
