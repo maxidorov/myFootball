@@ -121,10 +121,16 @@ extension SearchTeamVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        cell.selectionStyle = .none
         if searchedTeams.count == 0 && searchBar.text == "" {
             cell.textLabel?.text = allTeams[indexPath.row].name
         } else {
             cell.textLabel?.text = searchedTeams[indexPath.row].name
+        }
+        for team in parentVCDelegate.savedFavoritesTeams {
+            if String(describing: team.value(forKey: "name")!) == cell.textLabel?.text {
+                cell.accessoryType = .checkmark
+            }
         }
         return cell
     }
@@ -136,6 +142,13 @@ extension SearchTeamVC: UITableViewDataSource {
         } else {
             favoriteTeam = searchedTeams[indexPath.row]
         }
+        if let cell = self.tableView.cellForRow(at: indexPath) {
+            if cell.accessoryType == .checkmark {
+                dismiss(animated: true, completion: nil)
+                return
+            }
+        }
+        self.tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         searchBar.text = ""
         self.filterTeams()
         self.tableView.reloadData()

@@ -18,6 +18,7 @@ class FavoritesVC: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         self.navigationItem.title = "Favorites"
+        tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
     }
     
     required init?(coder: NSCoder) {
@@ -90,12 +91,16 @@ extension FavoritesVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        cell.selectionStyle = .none
         cell.textLabel?.text = savedFavoritesTeams[indexPath.row].value(forKey: "name") as? String
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(TeamDetailVC(), animated: true)
+        let favoriteTeamId = savedFavoritesTeams[indexPath.row].value(forKey: "id") as? Int
+        let favoriteTeamName = savedFavoritesTeams[indexPath.row].value(forKey: "name") as? String
+        let favoriteTeamDetailVC = TeamDetailVC(teamId: favoriteTeamId, teamName: favoriteTeamName)
+        navigationController?.pushViewController(favoriteTeamDetailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

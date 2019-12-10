@@ -21,9 +21,8 @@
 		34683DDE238BCCC1002D6C1E /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34683DDD238BCCC1002D6C1E /* RootVC.swift */; };
 		34683DE3238BCCC3002D6C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34683DE2238BCCC3002D6C1E /* Assets.xcassets */; };
 		34683DE6238BCCC3002D6C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34683DE4238BCCC3002D6C1E /* LaunchScreen.storyboard */; };
-		3479F727238C515F002B39C5 /* SomeVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479F726238C515F002B39C5 /* SomeVCCell.swift */; };
 		3479F72A238C589E002B39C5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479F729238C589E002B39C5 /* NetworkManager.swift */; };
-		349D168523914B450064B5CF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D168423914B450064B5CF /* UIImageViewExtension.swift */; };
+		34998B13239D637500976C5B /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34998B12239D637500976C5B /* DatePickerVC.swift */; };
 		349D16C02392D29A0064B5CF /* ModelActiveCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D16BF2392D29A0064B5CF /* ModelActiveCompetition.swift */; };
 		349D16C22392DFBA0064B5CF /* ModelCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D16C12392DFBA0064B5CF /* ModelCompetition.swift */; };
 		349D16C42392E5520064B5CF /* ColorsForMatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D16C32392E5520064B5CF /* ColorsForMatchState.swift */; };
@@ -36,7 +35,8 @@
 		34A6D3B9239877B1000F1697 /* Football.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34A6D3B7239877B1000F1697 /* Football.xcdatamodeld */; };
 		34A6D3BB2398889D000F1697 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6D3BA2398889D000F1697 /* CoreDataManager.swift */; };
 		34CEA06C238BE1EC00BA3CCE /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CEA06B238BE1EC00BA3CCE /* TabBarVC.swift */; };
-		34CEA06F238BE28000BA3CCE /* SomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CEA06E238BE28000BA3CCE /* SomeVC.swift */; };
+		34D837B5239EEBE80043618F /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D837B4239EEBE80043618F /* DateTableViewCell.swift */; };
+		34D837B7239EEC0E0043618F /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D837B6239EEC0E0043618F /* DatePickerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,9 +56,8 @@
 		34683DE2238BCCC3002D6C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34683DE5238BCCC3002D6C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34683DE7238BCCC3002D6C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3479F726238C515F002B39C5 /* SomeVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeVCCell.swift; sourceTree = "<group>"; };
 		3479F729238C589E002B39C5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		349D168423914B450064B5CF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		34998B12239D637500976C5B /* DatePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		349D16BF2392D29A0064B5CF /* ModelActiveCompetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelActiveCompetition.swift; sourceTree = "<group>"; };
 		349D16C12392DFBA0064B5CF /* ModelCompetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCompetition.swift; sourceTree = "<group>"; };
 		349D16C32392E5520064B5CF /* ColorsForMatchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsForMatchState.swift; sourceTree = "<group>"; };
@@ -71,7 +70,8 @@
 		34A6D3B8239877B1000F1697 /* Football.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Football.xcdatamodel; sourceTree = "<group>"; };
 		34A6D3BA2398889D000F1697 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		34CEA06B238BE1EC00BA3CCE /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
-		34CEA06E238BE28000BA3CCE /* SomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeVC.swift; sourceTree = "<group>"; };
+		34D837B4239EEBE80043618F /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		34D837B6239EEC0E0043618F /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,18 +167,8 @@
 				34CEA06B238BE1EC00BA3CCE /* TabBarVC.swift */,
 				34417C8D238EF3960047CD2B /* Today */,
 				349D16C62392E82B0064B5CF /* Favorites */,
-				3479F725238C513E002B39C5 /* SomeVC */,
 			);
 			path = TabBarVC;
-			sourceTree = "<group>";
-		};
-		3479F725238C513E002B39C5 /* SomeVC */ = {
-			isa = PBXGroup;
-			children = (
-				34CEA06E238BE28000BA3CCE /* SomeVC.swift */,
-				3479F726238C515F002B39C5 /* SomeVCCell.swift */,
-			);
-			path = SomeVC;
 			sourceTree = "<group>";
 		};
 		3479F728238C583F002B39C5 /* NetworkManager */ = {
@@ -200,7 +190,6 @@
 		347EB2A023946C9C0002FCD6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				349D168423914B450064B5CF /* UIImageViewExtension.swift */,
 				349D16CE239302CA0064B5CF /* Area.swift */,
 				349D16C32392E5520064B5CF /* ColorsForMatchState.swift */,
 			);
@@ -236,11 +225,30 @@
 		34CEA068238BE0B200BA3CCE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3432749523907A9B003CCC15 /* TeamDescriptionVC.swift */,
-				34A6D3B4239870DD000F1697 /* TeamDetailVC.swift */,
+				34D837B2239EEBB90043618F /* Team */,
+				34D837B3239EEBBF0043618F /* DatePicker */,
 				3479F724238C5130002B39C5 /* TabBarVC */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		34D837B2239EEBB90043618F /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				3432749523907A9B003CCC15 /* TeamDescriptionVC.swift */,
+				34A6D3B4239870DD000F1697 /* TeamDetailVC.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		34D837B3239EEBBF0043618F /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				34998B12239D637500976C5B /* DatePickerVC.swift */,
+				34D837B4239EEBE80043618F /* DateTableViewCell.swift */,
+				34D837B6239EEC0E0043618F /* DatePickerTableViewCell.swift */,
+			);
+			path = DatePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,14 +328,14 @@
 				34A6D3B9239877B1000F1697 /* Football.xcdatamodeld in Sources */,
 				34417C46238ED7080047CD2B /* ModelMatch.swift in Sources */,
 				34417C91238EF52C0047CD2B /* MatchOverviewCell.swift in Sources */,
+				34998B13239D637500976C5B /* DatePickerVC.swift in Sources */,
 				34A6D3B5239870DD000F1697 /* TeamDetailVC.swift in Sources */,
-				34CEA06F238BE28000BA3CCE /* SomeVC.swift in Sources */,
 				3432749623907A9B003CCC15 /* TeamDescriptionVC.swift in Sources */,
 				349D16D1239304600064B5CF /* ModelTeams.swift in Sources */,
-				3479F727238C515F002B39C5 /* SomeVCCell.swift in Sources */,
+				34D837B7239EEC0E0043618F /* DatePickerTableViewCell.swift in Sources */,
 				34417C8F238EF3C00047CD2B /* TodayVC.swift in Sources */,
 				34CEA06C238BE1EC00BA3CCE /* TabBarVC.swift in Sources */,
-				349D168523914B450064B5CF /* UIImageViewExtension.swift in Sources */,
+				34D837B5239EEBE80043618F /* DateTableViewCell.swift in Sources */,
 				34417C48238ED85E0047CD2B /* ModelMatchesResponse.swift in Sources */,
 				3432749A23907F7A003CCC15 /* ModelTeamDescription.swift in Sources */,
 				349D16C42392E5520064B5CF /* ColorsForMatchState.swift in Sources */,

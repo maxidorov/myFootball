@@ -22,9 +22,6 @@ class MatchOverviewCell: UITableViewCell {
     var awayTeamNameLabel = UILabel()
     var statusLabel = UILabel()
     
-    var homeTeamLogoImageView = UIImageView()
-    var awayTeamLogoImageView = UIImageView()
-    
     var parentViewControllerDelegate: UIViewController!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -90,20 +87,6 @@ class MatchOverviewCell: UITableViewCell {
         statusLabel.textAlignment = .left
         statusLabel.textColor = .lightGray
         statusLabel.font = statusLabelFont
-        
-//        let teamLogoImageViewSize: CGFloat = 80
-//
-//        contentView.addSubview(homeTeamLogoImageView)
-//        homeTeamLogoImageView.backgroundColor = .black
-//        homeTeamLogoImageView.frame = CGRect(x: 0, y: 0, width: teamLogoImageViewSize, height: teamLogoImageViewSize)
-//        homeTeamLogoImageView.center.x = contentView.center.x * (1 / 2)
-//        homeTeamLogoImageView.center.y = contentView.center.y
-//
-//        contentView.addSubview(awayTeamLogoImageView)
-//        awayTeamLogoImageView.backgroundColor = .black
-//        awayTeamLogoImageView.frame = CGRect(x: 0, y: 0, width: teamLogoImageViewSize, height: teamLogoImageViewSize)
-//        awayTeamLogoImageView.center.x = contentView.center.x * (3 / 2)
-//        awayTeamLogoImageView.center.y = contentView.center.y
     }
     
     required init?(coder: NSCoder) {

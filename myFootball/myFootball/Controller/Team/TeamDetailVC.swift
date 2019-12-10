@@ -1,54 +1,43 @@
 //
-//  TodayVC.swift
+//  TeamDetailVC.swift
 //  myFootball
 //
-//  Created by Maxim Sidorov on 27.11.2019.
+//  Created by Maxim Sidorov on 05.12.2019.
 //  Copyright © 2019 Maxim Sidorov. All rights reserved.
 //
 
 import UIKit
 
-class TodayVC: UIViewController {
+class TeamDetailVC: UIViewController {
     
-    var tableView: UITableView!
+    var teamId: Int!
+    var teamName: String!
     
+    var tableView = UITableView()
     var matches = [ModelMatch]()
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        self.navigationItem.title = "Today"
-        tabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 0)
-    }
+    var startDate = Date() - 60 * 60 * 24 * 7
+    var endDate = Date()
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    init(teamId: Int?, teamName: String?) {
+        self.teamId = teamId
+        self.teamName = teamName
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.teamId = nil
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .green
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+    
+        self.navigationItem.title = teamName
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Date", style: .plain, target: self, action: #selector(chooseDate))
         
         setUpTableView()
         loadMatchesOverviewAndUpdateTableView()
-    }
-    
-    private func loadMatchesOverviewAndUpdateTableView() {        
-        let groupLoadMatches = DispatchGroup()
-        groupLoadMatches.enter()
-        NetworkManager.shared.getTodayMatches { (result) in
-            switch result {
-            case .success(let response):
-                self.matches = response.matches!
-                groupLoadMatches.leave()
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-        groupLoadMatches.notify(queue: DispatchQueue.main) {
-            self.tableView.reloadData()
-        }
     }
     
     private func setUpTableView() {
@@ -65,19 +54,58 @@ class TodayVC: UIViewController {
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
     }
+    
+    func loadMatchesOverviewAndUpdateTableView() {
+        let groupLoadMatches = DispatchGroup()
+        groupLoadMatches.enter()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        NetworkManager.shared.getTeamsMatchesDuringPeriod(teamId: teamId, dateFrom: startDate, dateTo: endDate) { (result) in
+            switch result {
+            case .success(let response):
+                if let matches = response.matches {
+                    self.matches = matches
+                    groupLoadMatches.leave()
+                } else {
+                    // smth goes wrong
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        groupLoadMatches.notify(queue: DispatchQueue.main) {
+            self.tableView.reloadData()
+        }
+    }
+    
+    @objc
+    private func chooseDate() {
+        let datePickerVC = DatePickerVC([startDate, endDate])
+        datePickerVC.parentVCDelegate = self
+        present(datePickerVC, animated: true, completion: nil)
+    }
 }
 
-extension TodayVC: UITableViewDataSource {
-    
+extension TeamDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        matches.count
+        return matches.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            let cell = UITableViewCell()
+            cell.selectionStyle = .none
+            cell.textLabel?.text = "\(startDate.toSting().replacingOccurrences(of: "-", with: ".")) ― \(endDate.toSting().replacingOccurrences(of: "-", with: "."))"
+            cell.textLabel?.textAlignment = .center
+            cell.textLabel?.textColor = .lightGray
+            cell.textLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 20)
+            return cell
+        }
+            
         let cell = tableView.dequeueReusableCell(withIdentifier: MatchOverviewCell.reuseId, for: indexPath) as! MatchOverviewCell
         cell.selectionStyle = .none
         
-        let match = matches[indexPath.row]
+        let match = matches[indexPath.row - 1]
         
         guard let awayTeamId = match.awayTeam?.id else { return cell }
         guard let homeTeamId = match.homeTeam?.id else { return cell }
@@ -111,12 +139,9 @@ extension TodayVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        
+        return indexPath.row == 0 ? 44.0 : 200.0
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//    }
 }
 
-extension TodayVC: UITableViewDelegate { }
+extension TeamDetailVC: UITableViewDelegate { }
