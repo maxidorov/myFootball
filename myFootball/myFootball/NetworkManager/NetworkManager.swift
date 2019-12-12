@@ -42,28 +42,28 @@ class NetworkManager {
         mainSession(request: getTeamsMatchesDuringPeriodRequest(id, dateFrom, dateTo), completion: completion)
     }
  
-    private func getTodayMatchesRequest() -> URLRequest {
+    func getTodayMatchesRequest() -> URLRequest {
         let today = DateManager.today()
         let urlString = mainUrlString + "matches?dateFrom=\(today)&dateTo=\(today)"
         return getRequestWithMainHeader(urlString)
     }
     
-    private func getTeamDescriptionRequest(_ id: Int) -> URLRequest {
+    func getTeamDescriptionRequest(_ id: Int) -> URLRequest {
         let urlString = mainUrlString + "teams/\(id)"
         return getRequestWithMainHeader(urlString)
     }
     
-    private func getTeamsFromAreaRequest(_ area: Area) -> URLRequest {
+    func getTeamsFromAreaRequest(_ area: Area) -> URLRequest {
         let urlString = mainUrlString + "teams?areas=\(area.rawValue)"
         return getRequestWithMainHeader(urlString)
     }
     
-    private func getTeamsMatchesDuringPeriodRequest(_ id: Int, _ dateFrom: Date, _ dateTo: Date) -> URLRequest {
+    func getTeamsMatchesDuringPeriodRequest(_ id: Int, _ dateFrom: Date, _ dateTo: Date) -> URLRequest {
         let urlString = mainUrlString + "teams/\(id)/matches?dateFrom=\(dateFrom.toSting())&dateTo=\(dateTo.toSting())"
         return getRequestWithMainHeader(urlString)
     }
     
-    private func getRequestWithMainHeader(_ urlString: String) -> URLRequest {
+    func getRequestWithMainHeader(_ urlString: String) -> URLRequest {
         let url = URL(string: urlString)
         var request = URLRequest(url: url!)
         request.httpMethod = "GET"

@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3419A81223A1218C00378709 /* myFootballTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419A81123A1218C00378709 /* myFootballTests.swift */; };
+		3419A81923A1BE4C00378709 /* SearchTeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D16C92392F0330064B5CF /* SearchTeamVC.swift */; };
+		3419A81A23A1BE4E00378709 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D16C72392E88B0064B5CF /* FavoritesVC.swift */; };
+		3419A81B23A1BE5000378709 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34417C8E238EF3C00047CD2B /* TodayVC.swift */; };
+		3419A81C23A1BE5300378709 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CEA06B238BE1EC00BA3CCE /* TabBarVC.swift */; };
+		3419A81D23A1BE5500378709 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D837B6239EEC0E0043618F /* DatePickerTableViewCell.swift */; };
+		3419A81E23A1BE5700378709 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D837B4239EEBE80043618F /* DateTableViewCell.swift */; };
+		3419A81F23A1BE5A00378709 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34998B12239D637500976C5B /* DatePickerVC.swift */; };
+		3419A82023A1BE5D00378709 /* TeamDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6D3B4239870DD000F1697 /* TeamDetailVC.swift */; };
+		3419A82123A1BE5F00378709 /* TeamDescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432749523907A9B003CCC15 /* TeamDescriptionVC.swift */; };
+		3419A82223A1BE6200378709 /* MatchOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34417C90238EF52C0047CD2B /* MatchOverviewCell.swift */; };
+		3419A82323A1BE6400378709 /* ModelTeams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D16D0239304600064B5CF /* ModelTeams.swift */; };
+		3419A82423A1BE6600378709 /* ModelPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432749723907EBA003CCC15 /* ModelPlayer.swift */; };
+		3419A82523A1BE6900378709 /* ModelActiveCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D16BF2392D29A0064B5CF /* ModelActiveCompetition.swift */; };
+		3419A82623A1BE6B00378709 /* ModelTeamDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432749923907F7A003CCC15 /* ModelTeamDescription.swift */; };
+		3419A82723A1BE6D00378709 /* ModelFullTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D14F3238EFF05009C5050 /* ModelFullTime.swift */; };
+		3419A82823A1BE7000378709 /* ModelScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D14F1238EFE5C009C5050 /* ModelScore.swift */; };
+		3419A82923A1BE7200378709 /* ModelCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D16C12392DFBA0064B5CF /* ModelCompetition.swift */; };
+		3419A82A23A1BE7400378709 /* ModelMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34417C45238ED7080047CD2B /* ModelMatch.swift */; };
+		3419A82B23A1BE7600378709 /* ModelMatchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34417C47238ED85E0047CD2B /* ModelMatchesResponse.swift */; };
+		3419A82C23A1BE7A00378709 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34683DDD238BCCC1002D6C1E /* RootVC.swift */; };
+		3419A82D23A1BE7C00378709 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A3EA98238FF80B001F2A76 /* DateManager.swift */; };
+		3419A82E23A1BE7F00378709 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479F729238C589E002B39C5 /* NetworkManager.swift */; };
+		3419A82F23A1BE8100378709 /* ColorsForMatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D16C32392E5520064B5CF /* ColorsForMatchState.swift */; };
+		3419A83023A1BE8300378709 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D16CE239302CA0064B5CF /* Area.swift */; };
+		3419A83123A1BE8600378709 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34683DDB238BCCC1002D6C1E /* SceneDelegate.swift */; };
+		3419A83223A1BE8800378709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34683DD9238BCCC1002D6C1E /* AppDelegate.swift */; };
+		3419A83323A1BE8A00378709 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A6D3BA2398889D000F1697 /* CoreDataManager.swift */; };
 		342D14F2238EFE5C009C5050 /* ModelScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D14F1238EFE5C009C5050 /* ModelScore.swift */; };
 		342D14F4238EFF05009C5050 /* ModelFullTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D14F3238EFF05009C5050 /* ModelFullTime.swift */; };
 		3432749623907A9B003CCC15 /* TeamDescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432749523907A9B003CCC15 /* TeamDescriptionVC.swift */; };
@@ -39,7 +67,20 @@
 		34D837B7239EEC0E0043618F /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D837B6239EEC0E0043618F /* DatePickerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3419A81423A1218C00378709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34683DCE238BCCC1002D6C1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34683DD5238BCCC1002D6C1E;
+			remoteInfo = myFootball;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3419A80F23A1218C00378709 /* myFootballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myFootballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3419A81123A1218C00378709 /* myFootballTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myFootballTests.swift; sourceTree = "<group>"; };
+		3419A81323A1218C00378709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		342D14F1238EFE5C009C5050 /* ModelScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelScore.swift; sourceTree = "<group>"; };
 		342D14F3238EFF05009C5050 /* ModelFullTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFullTime.swift; sourceTree = "<group>"; };
 		3432749523907A9B003CCC15 /* TeamDescriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDescriptionVC.swift; sourceTree = "<group>"; };
@@ -75,6 +116,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3419A80C23A1218C00378709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34683DD3238BCCC1002D6C1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,6 +133,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3419A81023A1218C00378709 /* myFootballTests */ = {
+			isa = PBXGroup;
+			children = (
+				3419A81123A1218C00378709 /* myFootballTests.swift */,
+				3419A81323A1218C00378709 /* Info.plist */,
+			);
+			path = myFootballTests;
+			sourceTree = "<group>";
+		};
 		34417C44238ED6EB0047CD2B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				34683DD8238BCCC1002D6C1E /* myFootball */,
+				3419A81023A1218C00378709 /* myFootballTests */,
 				34683DD7238BCCC1002D6C1E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				34683DD6238BCCC1002D6C1E /* myFootball.app */,
+				3419A80F23A1218C00378709 /* myFootballTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -254,6 +313,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3419A80E23A1218C00378709 /* myFootballTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3419A81823A1218C00378709 /* Build configuration list for PBXNativeTarget "myFootballTests" */;
+			buildPhases = (
+				3419A80B23A1218C00378709 /* Sources */,
+				3419A80C23A1218C00378709 /* Frameworks */,
+				3419A80D23A1218C00378709 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3419A81523A1218C00378709 /* PBXTargetDependency */,
+			);
+			name = myFootballTests;
+			productName = myFootballTests;
+			productReference = 3419A80F23A1218C00378709 /* myFootballTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		34683DD5238BCCC1002D6C1E /* myFootball */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34683DEA238BCCC3002D6C1E /* Build configuration list for PBXNativeTarget "myFootball" */;
@@ -281,6 +358,9 @@
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Maxim Sidorov";
 				TargetAttributes = {
+					3419A80E23A1218C00378709 = {
+						CreatedOnToolsVersion = 11.1;
+					};
 					34683DD5238BCCC1002D6C1E = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -300,11 +380,19 @@
 			projectRoot = "";
 			targets = (
 				34683DD5238BCCC1002D6C1E /* myFootball */,
+				3419A80E23A1218C00378709 /* myFootballTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3419A80D23A1218C00378709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34683DD4238BCCC1002D6C1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +405,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3419A80B23A1218C00378709 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3419A82E23A1BE7F00378709 /* NetworkManager.swift in Sources */,
+				3419A82123A1BE5F00378709 /* TeamDescriptionVC.swift in Sources */,
+				3419A82723A1BE6D00378709 /* ModelFullTime.swift in Sources */,
+				3419A82B23A1BE7600378709 /* ModelMatchesResponse.swift in Sources */,
+				3419A82423A1BE6600378709 /* ModelPlayer.swift in Sources */,
+				3419A83023A1BE8300378709 /* Area.swift in Sources */,
+				3419A81E23A1BE5700378709 /* DateTableViewCell.swift in Sources */,
+				3419A82323A1BE6400378709 /* ModelTeams.swift in Sources */,
+				3419A81223A1218C00378709 /* myFootballTests.swift in Sources */,
+				3419A82D23A1BE7C00378709 /* DateManager.swift in Sources */,
+				3419A81F23A1BE5A00378709 /* DatePickerVC.swift in Sources */,
+				3419A81923A1BE4C00378709 /* SearchTeamVC.swift in Sources */,
+				3419A81C23A1BE5300378709 /* TabBarVC.swift in Sources */,
+				3419A81B23A1BE5000378709 /* TodayVC.swift in Sources */,
+				3419A82523A1BE6900378709 /* ModelActiveCompetition.swift in Sources */,
+				3419A82823A1BE7000378709 /* ModelScore.swift in Sources */,
+				3419A82223A1BE6200378709 /* MatchOverviewCell.swift in Sources */,
+				3419A82923A1BE7200378709 /* ModelCompetition.swift in Sources */,
+				3419A82C23A1BE7A00378709 /* RootVC.swift in Sources */,
+				3419A81A23A1BE4E00378709 /* FavoritesVC.swift in Sources */,
+				3419A82F23A1BE8100378709 /* ColorsForMatchState.swift in Sources */,
+				3419A83223A1BE8800378709 /* AppDelegate.swift in Sources */,
+				3419A83123A1BE8600378709 /* SceneDelegate.swift in Sources */,
+				3419A82023A1BE5D00378709 /* TeamDetailVC.swift in Sources */,
+				3419A81D23A1BE5500378709 /* DatePickerTableViewCell.swift in Sources */,
+				3419A82A23A1BE7400378709 /* ModelMatch.swift in Sources */,
+				3419A83323A1BE8A00378709 /* CoreDataManager.swift in Sources */,
+				3419A82623A1BE6B00378709 /* ModelTeamDescription.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34683DD2238BCCC1002D6C1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +477,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3419A81523A1218C00378709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34683DD5238BCCC1002D6C1E /* myFootball */;
+			targetProxy = 3419A81423A1218C00378709 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		34683DE4238BCCC3002D6C1E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -366,6 +497,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3419A81623A1218C00378709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZB2A7WP7E;
+				INFOPLIST_FILE = myFootballTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MS.myFootballTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3419A81723A1218C00378709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZB2A7WP7E;
+				INFOPLIST_FILE = myFootballTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MS.myFootballTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		34683DE8238BCCC3002D6C1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -495,7 +662,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MS.myFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -514,13 +681,22 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MS.myFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3419A81823A1218C00378709 /* Build configuration list for PBXNativeTarget "myFootballTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3419A81623A1218C00378709 /* Debug */,
+				3419A81723A1218C00378709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		34683DD1238BCCC1002D6C1E /* Build configuration list for PBXProject "myFootball" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
